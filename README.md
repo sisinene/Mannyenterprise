@@ -13,4 +13,6 @@ Modern responsive website for a building-materials importer serving wholesale an
 
 Run `start-local.ps1` on Windows, then open `http://127.0.0.1:4187`.
 
-Stripe checkout also requires the server-side `STRIPE_SECRET_KEY` documented in `STRIPE_SETUP.md`.
+Stripe checkout uses a server-side secret from an Edge Function environment variable or the encrypted Supabase Vault fallback documented in `STRIPE_SETUP.md`.
+
+The deployed checkout source is versioned at `supabase/functions/create-checkout-session/index.ts`.
